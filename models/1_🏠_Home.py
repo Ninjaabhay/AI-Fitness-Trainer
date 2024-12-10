@@ -33,7 +33,8 @@ from PIL import Image
 
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Fitness Trainer", page_icon=":tada:", layout="wide")
+st.set_page_config(page_title="Fitness Trainer",
+                   page_icon=":tada:", layout="wide")
 
 
 def load_lottieurl(url):
@@ -49,12 +50,19 @@ def local_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-local_css("E:\AI Fitness Trainer\models\styles\styles.css")
+# local_css("E:\AI-Fitness-Trainer\models\styles\styles.css")
+local_css("styles/styles.css")
+
+# local_css("C:\Users\abhay\Downloads\New\AI-Fitness-Trainer\models\styles\styles.css")
+
 
 # ---- LOAD ASSETS ----
-lottie_coding = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_FYx0Ph.json")
-music = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_ikk4jhps.json")
-podcast = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_JjpNLdaKYX.json")
+lottie_coding = load_lottieurl(
+    "https://assets10.lottiefiles.com/packages/lf20_FYx0Ph.json")
+music = load_lottieurl(
+    "https://assets5.lottiefiles.com/packages/lf20_ikk4jhps.json")
+podcast = load_lottieurl(
+    "https://assets8.lottiefiles.com/packages/lf20_JjpNLdaKYX.json")
 
 
 img_contact_form = Image.open("./images/home.jpg")
@@ -67,7 +75,7 @@ with st.container():
     st.write(
         "Step into a fitter future: Welcome to your fitness revolution!"
     )
-    #st.write("[Learn More >](https://pythonandvba.com)")
+    # st.write("[Learn More >](https://pythonandvba.com)")
 
 # ---- WHAT I DO ----
 with st.container():
@@ -76,7 +84,7 @@ with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         st.header("")
-        #st.write("##")
+        # st.write("##")
         st.write(
             """
             - We are thrilled to have you here on our platform dedicated to empowering and inspiring individuals on their journey towards a healthier and fitter lifestyle. Whether you're a seasoned fitness enthusiast or just starting your fitness journey, we have everything you need to reach your goals and achieve the best version of yourself.
@@ -98,7 +106,7 @@ with st.container():
     st.write("##")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        #st.image(img_lottie_animation)
+        # st.image(img_lottie_animation)
         st_lottie(music, height=300, key="music")
     with text_column:
         st.write("##")
@@ -108,11 +116,12 @@ with st.container():
             Power up your workout with the ultimate music fuel!
             """
         )
-        st.markdown("[Have a Listen...](https://open.spotify.com/playlist/6N0Vl77EzPm13GIOlEkoJn?si=9207b7744d094bd3)")
+        st.markdown(
+            "[Have a Listen...](https://open.spotify.com/playlist/6N0Vl77EzPm13GIOlEkoJn?si=9207b7744d094bd3)")
 with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        #st.image(img_contact_form)
+        # st.image(img_contact_form)
         st_lottie(podcast, height=300, key="podcast")
     with text_column:
         st.write("##")
@@ -122,7 +131,8 @@ with st.container():
             Take your workouts to the next level with our immersive podcast that pumps you up from start to finish!
             """
         )
-        st.markdown("[Have a listen...](https://open.spotify.com/playlist/09Ig7KfohF5WmU9RhbDBjs?si=jyZ79y3wQgezrEDHim0NvQ)")
+        st.markdown(
+            "[Have a listen...](https://open.spotify.com/playlist/09Ig7KfohF5WmU9RhbDBjs?si=jyZ79y3wQgezrEDHim0NvQ)")
 
 # ---- CONTACT ----
 with st.container():
